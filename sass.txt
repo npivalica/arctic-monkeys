@@ -1,0 +1,151 @@
+$pozadina:#000;
+$slova:#abaca7;
+$aktivan:#f0ba34;
+$haver:#5b5d52;
+$akcenat:#d07725;
+$font:'Play', sans-serif;
+
+@mixin struktura {
+  width:1200px;
+  margin: 0 auto;
+  display:flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body {
+  background-color:$pozadina;
+  color:$slova;
+  font-family:$font;
+}
+main {
+  width: 1200px;
+  margin: 0 auto;
+}
+#top {
+  background-color: $pozadina;
+  width:100%;
+  height: 70px;
+  position: fixed;
+  z-index: 2;
+  #container1 {
+    @include struktura
+    .meni1 {
+      width:14%;
+      a img {
+        max-width: 100%;
+        max-height: 70px;
+      }
+      #forma {
+        input, button {
+          background-color: $pozadina;
+          color:$slova;
+          max-width: 50%;
+        }
+        input{
+          &::placeholder{
+            color:$slova;
+            background-color: $pozadina;
+            font-size: 1.2em;
+          }
+          &:focus {
+            color:$aktivan;
+          }
+        }
+        button {
+          &:hover {
+            color:$haver;
+          }
+        }
+      }
+    }
+    nav {
+      width: 70%;
+      ul {
+        display:flex;
+        flex-flow: row;
+        li {
+          padding-right: 12px;
+          a{
+            font-size: 1.2em;
+            &.active{
+              color:$aktivan;
+            }
+            &:hover:not(.active){
+              color:$haver;
+            }
+          }
+          &:last-child{
+            margin-left: auto;
+          }
+          &:last-child:hover i{
+            color:$haver;
+          }
+        }
+      }
+    }
+  }
+}
+main {
+  h1 {
+    max-width: 100%;
+    font-size: 3em;
+    text-align: center;
+    padding: 4% 0;
+    span {
+      color:$akcenat;
+    }
+  }
+  #band {
+    align-items: flex-start;
+    .member {
+      width: 20%;
+      header h2 {
+        padding: 4% 0;
+        font-size: 2em;
+        text-align: center;
+        &::first-letter{
+          color:$akcenat;
+        }
+      }
+      p {
+        text-align: justify;
+        text-align-last: right;
+        text-indent: 2em;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+#bottom {
+  border-top: 2px solid $haver;
+  margin-top: 4%;
+  #container2 {
+    @include struktura
+    span {
+      padding: 16px 0;
+      & a:hover {
+        color:$akcenat;
+      }
+    }
+    #author, #soc {
+      max-width: 25%;
+    }
+    #disclaimer {
+      max-width: 50%;
+      text-align: center;
+    }
+    #author a {
+      padding-right: 10px;
+    }
+    #soc a {
+      padding-left: 20px;
+      margin-left: auto;
+    }
+  }
+}

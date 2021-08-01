@@ -1,0 +1,647 @@
+/*--- GLAVNE INFORMACIJE ---*/
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+.cleaner {
+  clear: both;
+}
+a {
+  text-decoration: none;
+  outline: 0;
+}
+li {
+  list-style-type: none;
+}
+body {
+  background-color: #000;
+  color:#abaca7;
+  font-family: 'Play', sans-serif;
+}
+input[type], button, textarea {
+  outline: 0;
+  outline-offset: 0;
+  border:none;
+  border-radius: 2px;
+  font-family: 'Play', sans-serif;
+}
+input[type="submit"], input[type="reset"], button {
+  cursor: pointer;
+}
+img {
+  border-radius: 4px;
+}
+a:visited, a:link, a:active{
+  color:#abaca7;
+}
+main {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/*--- HEADER ---*/
+
+header#top{
+  background-color: #000;
+  width:100%;
+  height: 70px;
+  position: fixed;
+  z-index: 2;
+}
+#container1, #container2, #band {
+  width:1200px;
+  margin: 0 auto;
+  display:flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#container1 .meni1 {
+  width:14%;
+}
+#container1 nav {
+  width: 70%;
+}
+#container1 nav ul {
+  display:flex;
+  flex-flow: row;
+}
+#container1 nav ul li {
+  padding-right: 12px;
+}
+#container1 nav ul li a, #forma button i {
+  font-size: 1.2em;
+}
+#container1 nav ul li a.active{
+  color: #f0ba34;
+}
+#container1 nav ul li a:hover:not(.active){
+  color:#5b5d52;
+}
+#container1 nav ul li:last-child{
+  margin-left: auto;
+}
+#container1 nav ul li:last-child:hover i{
+  color:#f0ba34;
+}
+.meni1 a img {
+  max-width: 100%;
+  max-height: 70px;
+}
+#bck {
+  background-image: url("../images/ambck.gif");
+  background-attachment: fixed;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  max-width: 100%;
+}
+#forma input, #forma button {
+  background-color: #000;
+  color:#abaca7;
+  max-width: 50%;
+}
+#forma input::placeholder {
+  color:#abaca7;
+  font-size: 1.2em;
+}
+#forma input:focus{
+  color:#f0ba34;
+}
+#forma button:hover {
+  color:#5b5d52;
+}
+
+/*---MAIN---*/
+
+main h1 {
+  max-width: 100%;
+  font-size: 3em;
+  text-align: center;
+  padding: 4% 0;
+}
+main h1 span {
+  color:#d07725;
+}
+#band {
+  align-items: flex-start;
+}
+.member {
+  width: 20%;
+}
+.member header h2 {
+  padding: 4% 0;
+  font-size: 2em;
+  text-align: center;
+}
+.member p {
+  text-align: justify;
+  text-align-last: right;
+  text-indent: 2em;
+}
+.member img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+.member header h2::first-letter{
+  color:#d07725;
+}
+
+/*---FOOTER---*/
+
+footer#bottom {
+  border-top: 2px solid #5b5d52;
+  margin-top: 4%;
+}
+#bottom #container2 span {
+  padding: 16px 0;
+}
+#author, #soc {
+  max-width: 25%;
+}
+#disclaimer {
+  max-width: 50%;
+  text-align: center;
+}
+#author a {
+  padding-right: 10px;
+}
+#soc a {
+  padding-left: 20px;
+  margin-left: auto;
+}
+#container2 span a:hover{
+  color:#d07725;
+}
+
+/*--- ABOUT ---*/
+#origin {
+  background-image: url("../images/origin.jpg");
+  background-attachment:fixed;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+  min-height: 800px;
+}
+#about {
+  padding-top: 5%;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#about #tekst {
+  width: 56%;
+}
+#tekst p {
+  text-align: justify;
+  text-align-last: right;
+  text-indent: 2em;
+  font-size: 1.2em;
+}
+#tekst p span {
+  font-size: 1.4em;
+}
+#about #map {
+  width: 40%;
+}
+#about #map iframe {
+  width:100%;
+  min-height: 100%;
+  border:0;
+  border-radius: 4% 14%;
+}
+
+/*--- DISCOGRAPHY ---*/
+
+#discography {
+  background-image: url("../images/disco.jpg");
+  background-attachment:fixed;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+  min-height: 800px;
+}
+#disco {
+  width:1200px;
+  margin: 0 auto;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  align-items: flex-start;
+}
+#disco .album {
+  width: 33%;
+  padding: 30px;
+  border-radius: 6px;
+}
+#disco .album:hover {
+  background-color: #abaca7;
+  color:#d07725;
+}
+#disco .album img {
+  width: 100%;
+}
+#disco .album p {
+  font-weight: 700;
+  font-size: 1.2em;
+  text-align: center;
+  padding-top: 10px;
+}
+
+
+
+/*--- AUTHOR ---*/
+#author a.active {
+  color: #f0ba34;
+}
+#nina{
+  padding-top: 10%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#nina .image, #nina .contactme {
+  max-width: 48%;
+}
+#nina .image img {
+  max-width: 100%;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.image p {
+  padding-top: 4%;
+  text-align: justify;
+  text-align-last: right;
+  text-indent: 2em;
+  font-size: 1.2em;
+}
+.image p span {
+  color:#d07725;
+  font-size: 1.1em;
+}
+.contactme h3 {
+  text-align: center;
+  font-size: 1.4em;
+  padding-bottom: 8%;
+}
+.formcon {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+.formcon input {
+  width: 48%;
+  margin-bottom: 10%;
+  padding: 4px 0;
+  background-color: #000;
+  color:#d07725;
+  font-size: 1.2em;
+  border-bottom: 2px solid #abaca7;
+}
+.formcon input::placeholder{
+  color:#abaca7;
+}
+.formcon textarea {
+  width: 100%;
+  background-color: #000;
+  border: 2px solid #abaca7;
+  color:#d07725;
+  margin-bottom: 10%;
+}
+.formcon textarea::placeholder{
+  color:#abaca7;
+  font-size: 1.4em;
+}
+.formcon #send, .formcon #reset {
+  border: 2px solid #abaca7;
+}
+.formcon #send:focus, .formcon #reset:focus,.formcon #send:hover, .formcon #reset:hover{
+  background-color: #abaca7;
+  color:#000;
+}
+/*--- SIGNUP ---*/
+#signup {
+  padding-top: 10%;
+}
+#signup h1 span{
+  color:#d07725;
+}
+#signup form {
+  padding-top: 5%;
+  margin: 0 auto;
+  max-width: 400px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+#signup form input {
+  width: 100%;
+  margin-bottom: 10%;
+  padding: 4px 0;
+  background-color: #000;
+  color:#d07725;
+  font-size: 1.2em;
+  border-bottom: 2px solid #abaca7;
+}
+#signup form input::placeholder{
+  color:#abaca7;
+  font-size: 1.2em;
+}
+#signup form input#city, #signup form input#state {
+  width:48%;
+}
+#signup form input#subscribe {
+  background-color: #abaca7;
+  color:#000;
+  font-weight: 700;
+  border: none;
+  font-size: 1.4em;
+}
+#signup form input#subscribe:focus, #signup form input#subscribe:hover{
+  background-color: #d07725;
+  color:#abaca7;
+}
+
+/*---MEDIA QUERIES---*/
+
+@media screen and (max-width: 425px){
+  header#top {
+    position:static;
+    height: auto;
+    z-index: 0;
+  }
+  #container1, #container2, #band {
+    width:100%;
+    display:flex;
+    flex-flow: column;
+    justify-content:center;
+    padding-bottom: 2%;
+  }
+  #container1 nav ul {
+    display:flex;
+    flex-flow: column;
+    align-items:center;
+  }
+  #container1 nav ul li:last-child{
+    margin-left: inherit;
+  }
+  #container1 .meni1 {
+    width: auto;
+  }
+  #forma {
+    display: none;
+  }
+  #bck {
+    background-image: url("../images/small.jpg");
+    background-attachment: fixed;
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 30vh;
+    max-width: 100%;
+  }
+  main {
+    width:100%;
+  }
+  main h1 {
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
+    padding: 4% 0;
+  }
+  #band {
+    align-items: center;
+  }
+  #band .member {
+    width: 90%;
+    padding-top: 2%;
+  }
+  #author, #soc, #disclaimer {
+    max-width: 100%;
+  }
+  #author a {
+    display: block;
+    text-align: center;
+    max-width: 100%;
+  }
+  #origin {
+    display:none;
+  }
+  #about {
+    padding-top: 5%;
+    display:flex;
+    flex-flow:column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #about #tekst, #about #map {
+    width: 90%;
+    padding-top: 5%;
+  }
+  #about #map iframe {
+    min-height: 200px;
+  }
+  #discography {
+    display: none;
+  }
+  #disco {
+    width: 100%;
+    display:flex;
+    flex-flow: column;
+    justify-content:space-around;
+    align-items: center;
+  }
+  #disco .album {
+    width: 100%;
+  }
+  #nina{
+    padding-top: 10%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  #nina .image, #nina .contactme {
+    max-width: 90%;
+  }
+  .contactme h3 {
+    padding: 8% 0;
+  }
+  .formcon input {
+    width: 100%;
+  }
+  #signup {
+    width:90%;
+  }
+  #signup form input#city, #signup form input#state {
+    width:100%;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 768px){
+  main {
+    width: 100%;
+  }
+  #container1, #container2, #band {
+    width:100%;
+    display:flex;
+    flex-flow:wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #container1 nav ul li:last-child{
+    margin-left: inherit;
+  }
+  #forma {
+    display: none;
+  }
+  #container1 .meni1 {
+    width:18%;
+  }
+  #container1 nav {
+    width: 80%;
+  }
+  #container1 nav ul {
+    justify-content: space-around;
+  }
+  #bck{
+    background-image: url("../images/med.jpg");
+    background-attachment: fixed;
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    min-height: 30vh;
+    max-width: 100%;
+  }
+  .member {
+    width: 45%;
+  }
+  main h1 {
+    max-width: 98%;
+  }
+  .member p {
+    padding-bottom: 4%;
+  }
+  #band {
+    align-items:baseline;
+  }
+  #bottom #container2 {
+    flex-flow: column;
+  }
+  #author, #soc, #disclaimer {
+    max-width: 100%;
+  }
+  #origin {
+    background-size: 100%;
+    background-position: top;
+    min-height: 30vh;
+  }
+  #about {
+    padding-top: 4%;
+    display:flex;
+    flex-flow: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #about #tekst, #about #map {
+    width: 90%;
+  }
+  #about #map iframe{
+    min-height: 400px;
+    padding-bottom: 4%;
+  }
+  #discography {
+    background-image: url("../images/arctic-monkeys.jpg");
+    background-attachment:fixed;
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    max-width: 100%;
+    min-height: 30vh;
+  }
+  #disco {
+    width:100%;
+    display:flex;
+    flex-flow: wrap;
+    justify-content:space-between;
+    align-items: baseline;
+  }
+  #disco .album {
+    width: 48%;
+  }
+  #nina {
+    padding: 15% 0;
+    justify-content: space-around;
+  }
+  #nina .image {
+    max-width: 44%;
+  }
+  #nina .contactme {
+    max-width: 40%;
+  }
+  .contactme h3 {
+    padding: 8% 0;
+  }
+  .formcon {
+    padding-top: 4%;
+    flex-flow: column;
+  }
+  .formcon input{
+    width: 100%;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1200px){
+  main {
+    width: 100%;
+  }
+  #container1, #container2, #band {
+    width:100%;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+  #bck {
+    background-size: 100%;
+    background-position: top;
+    min-height: 60vh;
+  }
+  #author a {
+    display: block;
+    text-align: center;
+    max-width: 100%;
+  }
+  #origin {
+    background-size: 100%;
+    background-position: top;
+    min-height: 60vh;
+  }
+  #about {
+    justify-content: space-around;
+  }
+  #about #tekst {
+    width: 52%;
+  }
+  #discography {
+    background-size: 100%;
+    background-position: top;
+    min-height: 60vh;
+  }
+  #disco {
+    width:100%;
+    display:flex;
+    flex-flow: wrap;
+    justify-content:space-between;
+    align-items: baseline;
+  }
+  #disco .album {
+    width: 46%;
+  }
+  #nina {
+    justify-content: space-around;
+  }
+}
