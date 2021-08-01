@@ -1,2 +1,2 @@
 # arctic-monkeys
-Media query website
+School project for Web design: media query website
